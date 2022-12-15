@@ -21,18 +21,33 @@ $page= [
 
 include_once ('./includes/header.php');
 ?>
-<div class="container text-center">
-  <div class="row align-items-start">
-    <div class="col-sm-12">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
-</div>
-    <h1>Hello, world!</h1>
+
+<div class="container">
+    <header>
+        <div class="title">Track Calories</div>
+        <div class="profile"><?php echo $user['name']; ?></div>
+    </header>
+
+    <section class="dataUser">
+        <div>Graph</div>
+        <div>IMC</div>
+        <div><?php echo $user['weight']; ?>Kg</div>
+    </section>
+
+    <section class="date">
+        <div><?php echo date('l d M Y'); ?></div>
+    </section>
+
+    <section class="list">
+        <div class="food">
+            <div class="titleFood">Big Mac</div>
+            <div class="kgFood">504 kcal</div>
+        </div>
+    </section>
+
+    <footer>
+        <button>+</button>
+    </footer>
+  </div>
 
   <?php include_once ('./includes/footer.php');?>
