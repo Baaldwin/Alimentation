@@ -1,28 +1,38 @@
 <?php
 
-$user= {
-  "name"=>"Alex",
-  "age" => 30,
-  "sexe" => "homme",
-  "weight" => 70kg,
-  "size" => 180,
-  "imc" => 23.4,
-  "email"=>"blabla@bb.fr",
-  "isLogged" => true
-};
+// Connexion à la BDD 
 
-if (!$user["isLogged"]){
-  header("location:\login.php");
-}
+// Un user s'est connecté
 
-$page= [
- "title" => "Track Calorie - Accueil"
+// On stock les informations du user dans une variable
+
+$user= [
+    "id"=>1,
+    "name"=>"Alex",
+    "age"=>32,
+    "sexe"=>"homme",
+    "weight"=>70,
+    "size"=>180,
+    "IMC"=>23.4,
+    "email"=>"blabla@blabla.com",
+    "isLogged"=>true
+
 ];
 
-include_once ('./includes/header.php');
+if(!$user["isLogged"]){
+    header("location:login.php");
+    exit;
+}
+
+$page=[
+    "title" => "Track Calorie - Accueil"
+];
+
+include_once('includes/header.php');
+
 ?>
 
-<div class="container">
+  <div class="container">
     <header>
         <div class="title">Track Calories</div>
         <div class="profile"><?php echo $user['name']; ?></div>
@@ -50,4 +60,4 @@ include_once ('./includes/header.php');
     </footer>
   </div>
 
-  <?php include_once ('./includes/footer.php');?>
+<?php include_once('includes/footer.php'); ?>
