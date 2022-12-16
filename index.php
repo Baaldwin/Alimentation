@@ -37,6 +37,7 @@ include_once('includes/header.php');
         <div class="title">Track Calories</div>
         <div class="profile"><?php echo $user['name']; ?></div>
     </header>
+    
 
     <section class="dataUser">
         <div>Graph</div>
