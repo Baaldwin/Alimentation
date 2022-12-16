@@ -1,3 +1,67 @@
+@import './components/header.scss';
+@import './variables.scss';
+@import './components/dataUser.scss';
+
 body{
-    background-color: rgb(255, 255, 255);
+    background: rgb(241, 239, 239);
 }
+
+.containerApp{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main{
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.doughnuts{
+    
+    width: 400px;
+    margin:auto;
+    position: relative;
+    .kcal{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.3rem;
+        
+    }
+}
+
+.custom-shape-divider-bottom-1671192855 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1671192855 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 168px;
+}
+
+.custom-shape-divider-bottom-1671192821 .shape-fill {
+    fill: #ffffff;
+}
+
+.food{
+    background: white;
+    border-radius: 20px;
+    box-shadow: 5px 4px 8px -1px #000000;
+    margin-bottom: 10px;
+    padding: 2rem;
+    .kgFood{
+        color: grey;
+    }
+}
+
+
+
